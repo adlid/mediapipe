@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mediapipe%20/static/css/main.c547f092.css",
+    "main.js": "/mediapipe%20/static/js/main.f833ba2b.js",
+    "index.html": "/mediapipe%20/index.html",
+    "main.c547f092.css.map": "/mediapipe%20/static/css/main.c547f092.css.map",
+    "main.f833ba2b.js.map": "/mediapipe%20/static/js/main.f833ba2b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c547f092.css",
+    "static/js/main.f833ba2b.js"
+  ]
+}
