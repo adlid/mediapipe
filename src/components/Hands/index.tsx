@@ -43,10 +43,10 @@ export const Hands = () => {
       return;
     }
 
-    const leftElbow = results.poseLandmarks[15];
-    const rightElbow = results.poseLandmarks[16];
-    const leftWrist = results.poseLandmarks[13];
-    const rightWrist = results.poseLandmarks[14];
+    const leftElbow = results.poseLandmarks[13];
+    const rightElbow = results.poseLandmarks[14];
+    const leftWrist = results.poseLandmarks[15];
+    const rightWrist = results.poseLandmarks[16];
     const leftShoulder = results.poseLandmarks[11];
     const rightShoulder = results.poseLandmarks[12];
 
