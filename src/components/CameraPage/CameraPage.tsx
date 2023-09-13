@@ -7,11 +7,7 @@ import {
   NormalizedLandmark,
 } from "@mediapipe/drawing_utils";
 import "./index.scss";
-import {
-  Holistic,
-  Results as HolisticResults,
-  NormalizedLandmarkList,
-} from "@mediapipe/holistic";
+import { Results as PoseResults, Pose } from "@mediapipe/pose";
 import { NavLink } from "react-router-dom";
 
 export const CameraPage = () => {
@@ -25,7 +21,7 @@ export const CameraPage = () => {
   const leftElbowAngleDegreeRef = useRef<HTMLDivElement>(null);
   const rightElbowAngleDegreeRef = useRef<HTMLDivElement>(null);
 
-  const posOnResults = (results: HolisticResults) => {
+  const posOnResults = (results: PoseResults) => {
     if (!canvasRef.current || !contextRef.current) {
       return;
     }
@@ -174,9 +170,9 @@ export const CameraPage = () => {
       sendToMediaPipe();
     });
 
-    const pose = new Holistic({
+    const pose = new Pose({
       locateFile: (file) =>
-        `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`,
+        `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`,
     });
     pose.onResults((results) => {
       posOnResults(results);
@@ -186,7 +182,6 @@ export const CameraPage = () => {
       smoothLandmarks: true,
       enableSegmentation: true,
       smoothSegmentation: true,
-      refineFaceLandmarks: true,
       minDetectionConfidence: 0.5,
       minTrackingConfidence: 0.5,
     });
