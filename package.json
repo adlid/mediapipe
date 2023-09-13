@@ -1,7 +1,7 @@
 {
-   "homepage": "https://adlid.github.io/mediapipe",
-  "name": "demo-app",
+  "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://gitname.github.io/react-gh-pages",
   "private": true,
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1640029074",
