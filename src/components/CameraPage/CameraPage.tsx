@@ -14,7 +14,7 @@ import {
 } from "@mediapipe/holistic";
 import { NavLink } from "react-router-dom";
 
-export const Hands = () => {
+export const CameraPage = () => {
   const [inputVideoReady, setInputVideoReady] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const inputVideoRef = useRef<HTMLVideoElement | null>(null);

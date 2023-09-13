@@ -1,25 +1,12 @@
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import { Hands } from "./components/Hands";
+import { BrowserRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "hands",
-    element: <Hands />,
-  },
-]);
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement!);
 root.render(
-  <>
-    <RouterProvider router={router} />
-  </>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
